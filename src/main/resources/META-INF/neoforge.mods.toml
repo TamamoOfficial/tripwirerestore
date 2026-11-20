@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mixins]]
+config = "tripwirerestore.mixins.json"
+
+[[mods]]
+modId = "tripwirerestore"
+version = "1.0.0"
+displayName = "Tripwire Restore (MC-129055)"
+authors = "Tamamo"
+description = '''Restores vanilla tripwire string-duper behaviour on NeoForge 1.21.1.
+
+Forge/NeoForge patched TripWireHookBlock#calculateState to guard the wire write-back
+with an isAir() check (labelled "fix MC-129055"), which breaks the vanilla string farm.
+This mod flips that single boolean back, making the write-back unconditional again -
+byte-for-byte equivalent to vanilla 1.21.1.'''
+
+[[dependencies.tripwirerestore]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,21.2)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.tripwirerestore]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1]"
+ordering = "NONE"
+side = "BOTH"

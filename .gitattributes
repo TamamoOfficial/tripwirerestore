@@ -1,0 +1,11 @@
+* text=auto
+
+# 构建脚本必须保持 LF，否则在 Linux / macOS 上无法执行
+*.sh text eol=lf
+
+# Windows 批处理
+*.bat text eol=crlf
+
+# 二进制
+*.jar binary
+*.png binary

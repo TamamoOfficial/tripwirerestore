@@ -1,0 +1,17 @@
+# 构建产物
+build/
+
+# 依赖缓存
+libs/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
